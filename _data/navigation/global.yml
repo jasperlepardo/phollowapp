@@ -1,35 +1,51 @@
-- text: Dashboard
-  icon: fas fa-tachometer-alt
-  url: app/dashboard/
+- class: 
+  type: 
+  menu:
+  - text: 
+    icon: 
+    url: 
+    status: 
+  - text: Dashboard
+    icon: fas fa-tachometer-alt
+    url: app/dashboard/
+    status: 
 
-- text: Calendar
-  icon: far fa-calendar
-  url: app/calendar/
+  - text: Calendar
+    icon: far fa-calendar
+    url: app/calendar/
+    status: 
 
-- text: Customers
-  icon: fas fa-address-book
-  url: app/customers/
+  - text: Customers
+    icon: fas fa-address-book
+    url: app/customers/
+    status: 
 
-- text: Messages
-  icon: fas fa-comments
-  url: app/messages/
+  - text: Messages
+    icon: fas fa-comments
+    url: app/messages/
+    status: 
 
-- text: Invoices
-  icon: fas fa-file-invoice
-  url: app/invoices/
+  - text: Invoices
+    icon: fas fa-file-invoice
+    url: app/invoices/
+    status: 
 
-- text: Satisfactions
-  icon: fas fa-hand-holding-heart
-  url: app/satisfactions/
+  - text: Satisfactions
+    icon: fas fa-hand-holding-heart
+    url: app/satisfactions/
+    status: 
 
-- text: Reports
-  icon: fas fa-chart-bar
-  url: app/reports/
+  - text: Reports
+    icon: fas fa-chart-bar
+    url: app/reports/
+    status: 
 
-- text: Employees
-  icon: fas fa-users
-  url: app/employees/
+  - text: Employees
+    icon: fas fa-users
+    url: app/employees/
+    status: 
 
-- text: Settings
-  icon: fas fa-cog
-  url: app/settings/advanced-settings.html
+  - text: Settings
+    icon: fas fa-cog
+    url: app/settings/advanced-settings.html>>>>>>> template/master
+    status: 

@@ -1,4 +1,4 @@
-- class: 
+- class: "nav-pills nav-stacked flex-column w-100"
   type: 
   menu:
   - text: 
@@ -47,5 +47,5 @@
 
   - text: Settings
     icon: fas fa-cog
-    url: app/settings/advanced-settings.html>>>>>>> template/master
+    url: app/settings/advanced-settings.html
     status: 

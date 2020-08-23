@@ -1,0 +1,101 @@
+---
+layout: app
+heading: 
+heading-title: Calendar
+---
+
+<div class="heading fixed-top">
+  <div class="container-fluid">
+    <div class="row d-flex align-items-end">
+      <div class="col-lg-3">
+        <div class="d-flex align-items-end">
+          <h1 class="heading-title h3">Friday, 28 September 2018</h1>
+          <a class="btn btn-link" href=""><i class="fa fa-angle-left"></i></a>
+          <a class="btn btn-link" href=""><i class="fa fa-angle-right"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        {% include components/molecules/nav-tabs.html
+          nav-type="nav-pills"
+          isLarge=""
+          isStacked=""
+          isJustified=""
+          isResponsive="nav-tabs-responsive"
+          list-value-name=site.data.navigation.calendar-settings
+          hasIcon=""
+        %}
+      </div>
+      <div class="col-lg-3 text-right">
+        <a class="btn btn-warning btn-lg" data-toggle="modal" data-target="#new-appointment" href="#new-appointment">New Appointment</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="table-scroller">
+  <table class="table">
+    <thead>
+      <tr>
+        <th><i class="far fa-user" style="font-size: 16px; padding: 8px;"></i></th>
+        <th>
+          <a class="media" href="">
+            <img class="mr-3 rounded-circle" src="https://ui-avatars.com/api/?name=Jasper+Lepardo" alt="" width="32" height="32" />
+            <div class="media-body align-self-center">
+              Jasper
+            </div>
+            <div class="ml-3 align-self-center">
+              <span class="badge badge-primary">00</span>
+            </div>
+          </a>
+        </th>
+        {% for employee in site.employees %}
+          <th>
+            <a class="media" href="">
+              <img class="mr-3 rounded-circle" src="https://ui-avatars.com/api/?name={{ employee.first-name }}+{{ employee.last-name }}" alt="" width="32" height="32" />
+              <div class="media-body align-self-center">
+                {{ employee.first-name }}
+              </div>
+              <div class="ml-3 align-self-center">
+                <span class="badge badge-primary">00</span>
+              </div>
+            </a>
+          </th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for time in site.data.list-value.business-hours %}
+        <tr>
+          <td>
+            {{ time.text }}
+          </td>
+          <td>&nbsp;</td>
+          {% for employee in site.employees %}
+            <td>&nbsp;</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          {% for employee in site.employees %}
+            <td>&nbsp;</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          {% for employee in site.employees %}
+            <td>&nbsp;</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          {% for employee in site.employees %}
+            <td>&nbsp;</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

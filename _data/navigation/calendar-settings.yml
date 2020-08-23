@@ -1,0 +1,11 @@
+- text: Days
+  url: days
+  status: active
+
+- text: Weeks
+  url: weeks
+  status: 
+
+- text: Months
+  url: months
+  status: 

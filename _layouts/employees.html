@@ -1,0 +1,140 @@
+---
+layout: app
+container-type:
+heading: 
+heading-title: Employees
+---
+
+<div class="heading">
+  <div class="container">
+    <div class="row no-gutters d-flex d-xl-none">
+      <div class="col-auto"><button class="btn btn-link btn-sm" type="button" onclick="history.back(-1)"><i class="fas fa-arrow-left"></i></button></div>
+      <div class="col text-center">
+        <h1 class="heading-title h4">{{ page.full-name }}</h1>
+        <p class="heading-subtitle">Vermont Branch</p>
+      </div>
+      <div class="col-auto"><button class="btn btn-link btn-sm" type="button"><i class="fas fa-info-circle"></i></button></div>
+    </div>
+    <div class="media d-none d-xl-flex">
+      <div class="d-inline-flex mr-3">
+        <img class="rounded-circle" src="https://ui-avatars.com/api/?name={{ page.first-name }}+{{ page.last-name }}&?background={{ employee.background-color }}&color=fff" alt="" width="96" height="96">
+      </div>
+      <div class="media-body align-self-center">
+        <div class="row">
+          <div class="col align-self-center">
+            <h1 class="heading-title h4">{{ page.full-name }} <a class="btn btn-link btn-link-custom btn-sm" data-toggle="modal" data-target="#edit-employee-profile" href="#edit-employee-profile"><i class="fas fa-pen"></i></a></h1>
+            <p class="heading-subtitle">Vermont Branch</p>
+          </div>
+          <div class="col align-self-center text-right">
+            <ul class="list list-icon list-icon-default list-icon-right mb-0">
+              <li><i class="list-item-icon fas fa-phone"></i>{{ page.phone }}</li>
+              <li><i class="list-item-icon fas fa-envelope"></i>{{ page.email }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="heading-navbar">
+      {% include components/molecules/nav-tabs.html
+        nav-type="nav-tabs"
+        isLarge=""
+        isStacked=""
+        isJustified=""
+        isResponsive="nav-tabs-responsive"
+        list-value-name=site.data.navigation.employee-settings
+        hasIcon=""
+      %}  
+    </nav>
+  </div>
+</div>
+<main class="container" id="main-content">
+  <div class="tab-content">
+    <div class="tab-pane show active" id="schedules-tab">
+      <div class="mb-3">
+        {% include components/molecules/nav-tabs.html
+          nav-type="nav-pills"
+          isLarge=""
+          isStacked=""
+          isJustified=""
+          isResponsive="nav-tabs-responsive"
+          list-value-name=site.data.navigation.employee-appointment-settings
+          hasIcon=""
+        %}
+      </div>
+      <div class="list-group list-group-custom">
+        {% for customer in site.customers limit:5 %}
+          <div class="list-group-item list-group-item-action">
+            <div class="row">
+              <div class="col-sm-auto">
+                <p class="mb-0"><b>02:00</b> PM</p>
+                <span class="badge badge-success">Confirmed</span>
+              </div>
+              <div class="col">
+                <p class="text-lg mb-0"><b><a href="{{ customer.url }}">{{ customer.full-name }}</a></b></p>
+                <p class="text-muted mb-0"><b>The Essenses Signature Massage</b> for <b>60 Mins</b> with <b>Jasper Lepardo</b></p>
+              </div>
+              <div class="col-sm-auto align-self-center">
+                <button class="btn btn-link btn-link-custom btn-link-dark">No Show</button>
+                <button class="btn btn-link btn-link-custom">Attended</button>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <hr class="dashed">
+      {% include components/organisms/footer.html %}
+    </div>
+
+    <div class="tab-pane" id="services-tab">
+      {% include components/organisms/services-accordion.html %}
+    </div>
+    <div class="tab-pane" id="working-hours-tab">
+      <div class="card">
+        <div class="card-body">
+          <div class="form-group row">
+            <!-- <label class="form-label col-lg-2" for="">Business Hours</label> -->
+            <div class="col-lg-5 offset-lg-2">
+              <label class="form-switch form-switch-left">
+                <input class="form-switch-input" type="checkbox">
+                <span class="form-switch-slider"></span>
+                <span class="form-switch-label form-switch-label-static">Use Business Hours</span>
+              </label>
+            </div>
+          </div>
+          <hr class="dashed">
+          {% include components/organisms/working-hours.html %}
+          <hr class="dashed">
+          <div class="offset-2">
+            <a class="btn btn-primary" href="">Update Working Hours</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane" id="leave-and-time-off-tab">
+      <div class="card">
+        <div class="card-header d-flex align-items-start align-items-center justify-content-between">
+          <h6 class="card-header-title h5">Leave & Time-Off</h6>
+          <a class="btn btn-primary" href="">Add New Leave</a>
+        </div>
+        <table class="table table-hover table-lg mb-0">
+          <thead>
+            <tr>
+              <th>Start</th>
+              <th>End</th>
+              <th>Total</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2018/09/28 09:00 AM</td>
+              <td>2018/09/28 06:00 PM</td>
+              <td>8 Hours</td>
+              <td>Severe headache</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>

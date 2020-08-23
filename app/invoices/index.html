@@ -1,0 +1,47 @@
+---
+layout: app
+container-type: container
+heading: true
+heading-title: Invoices
+heading-button: <a class="btn btn-warning btn-lg" href="create-invoice.html">Create Invoice</a>
+heading-search:
+heading-search-name:
+heading-search-placeholder:
+---
+
+<div class="mb-3">
+  {% include components/molecules/nav-tabs.html
+    nav-type="nav-pills"
+    isLarge=""
+    isStacked=""
+    isJustified=""
+    isResponsive="nav-tabs-responsive"
+    list-value-name=site.data.navigation.booking-settings
+    hasIcon=""
+  %}
+</div>
+
+<div class="card card-bordered card-rounded mb-4">
+  <table class="card-table table table-hover table-lg">
+    <thead>
+      <tr>
+        <th><a href=""><i class="fas fa-sort mr-1"></i>Invoice No.</a></th>
+        <th><a href=""><i class="fas fa-sort mr-1"></i>Customer Name</a></th>
+        <th><a href=""><i class="fas fa-sort mr-1"></i>Date</a></th>
+        <th><a href=""><i class="fas fa-sort mr-1"></i>Payment Method</a></th>
+        <th><a href=""><i class="fas fa-sort mr-1"></i>Amount</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <a href="{{ site.baseurl }}/app/invoices/3858.html">3858</a>
+        </td>
+        <td>Jasper Lepardo</td>
+        <td>2018/09/28 11:26 AM</td>
+        <td><span class="badge badge-warning">Pending</span></td>
+        <td>₱ 500.00</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

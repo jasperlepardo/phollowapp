@@ -1,0 +1,16 @@
+- text: Appointments
+  url: appointments
+  status: active
+
+- text: Custom Forms
+  url: custom-forms
+  status: 
+
+- text: Messages
+  url: messages
+  status: 
+
+- text: Satisfaction
+  url: satisfaction
+  status: 
+

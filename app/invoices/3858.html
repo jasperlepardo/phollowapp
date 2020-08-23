@@ -1,0 +1,56 @@
+---
+layout: app
+container-type: container
+heading: true
+heading-title: 
+sub-heading: true
+sub-heading-title: 3858
+---
+
+<div class="row">
+  <div class="col-lg-8 offset-lg-2">
+    <div class="header">
+      <div class="row">
+        <div class="col">
+          <h6 class="header-title h4">Customer Details</h6>
+        </div>
+      </div>
+    </div>
+    <div class="card card-bordered card-rounded mb-4">
+      <div class="card-body">
+        <div class="media d-none d-xl-flex">
+          <div class="d-inline-flex mr-3">
+            <img class="rounded-circle" src="https://ui-avatars.com/api/?name=Jasper+Lepardo&?background={{ employee.background-color }}&color=fff" alt="" width="96" height="96">
+          </div>
+          <div class="media-body align-self-center">
+            <div class="row">
+              <div class="col align-self-center">
+                <h6 class="h4 mt-4"><b>Jasper Lepardo</b> <a class="btn btn-link btn-link-custom btn-sm" data-toggle="modal" data-target="#edit-customer-profile" href="#edit-customer-profile"><i class="fas fa-pen"></i></a></h6>
+                <p>67% punctuality (2/3)</p>
+              </div>
+              <div class="col align-self-center text-right">
+                <ul class="list list-icon list-icon-default list-icon-right mb-0">
+                  <li><i class="list-item-icon fas fa-phone"></i>0917 116 1268</li>
+                  <li><i class="list-item-icon fas fa-envelope"></i>jsprlprd@gmail.com</li>
+                  <li><i class="list-item-icon fas fa-birthday-cake"></i>May 12 1993</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <div class="row">
+        <div class="col">
+          <h6 class="header-title h4">Invoice Details</h6>
+        </div>
+      </div>
+    </div>
+    {% include components/organisms/invoice-details.html %}
+    <div class="d-flex align-items-start align-items-center justify-content-between">
+      <a class="btn btn-link btn-lg" href="">Cancel</a>
+      <a class="btn btn-primary btn-lg" href="">Save Changes</a>
+    </div>
+  </div>
+</div>

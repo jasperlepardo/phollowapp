@@ -1,0 +1,15 @@
+- text: Schedules
+  url: schedules
+  status: active
+
+- text: Services
+  url: services
+  status:
+
+- text: Working Hours
+  url: working-hours
+  status:
+
+- text: Leave &amp; Time-Off
+  url: leave-and-time-off
+  status:

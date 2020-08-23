@@ -1,0 +1,28 @@
+---
+layout: app
+container-type: container
+heading: true
+heading-title: 
+heading-navbar:
+sub-heading: true
+sub-heading-title: Create Invoice
+---
+
+<div class="row">
+  <div class="col-lg-8 offset-lg-2">
+    <h6 class="h4 mb-3">Customer Details</h6>
+    <div class="card card-bordered card-rounded mb-4">
+      <div class="card-body">
+        <div class="d-flex">
+          <a class="btn btn-outline-dark mx-auto" href="#custom-form" data-toggle="collapse">Add Customer</a>
+        </div>
+      </div>
+    </div>
+    <h6 class="h4 mb-3">Invoice Details</h6>
+    {% include components/organisms/invoice-details.html %}
+    <div class="d-flex align-items-start align-items-center justify-content-between">
+      <a class="btn btn-link btn-lg" href="">Cancel</a>
+      <a class="btn btn-primary btn-lg" href="">Create Invoice</a>
+    </div>
+  </div>
+</div>
